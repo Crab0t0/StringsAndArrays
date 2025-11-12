@@ -4,19 +4,45 @@ import org.jetbrains.annotations.NotNull;
 
 public class StatsService {
     // все продажи
-    public int sumSales(int[] arr) {
-        int sum = 0; //все продажи
-        for (int i = 0; i > arr.length; i++) {
-            int t = sum + arr[i]++;
-            for (sum <= 0) {
-                sum = t;
+    public int sumSales(int @NotNull [] arr) {
+        int summa = 0;
+        for (int i = 0; i < arr.length; i++) {
+            summa += arr[i];
+
+
+        }
+        return summa;
+    }
+
+    // больше среднего
+    public int maxAmount(int @NotNull [] arr) {
+        int min = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > amount(arr)) {
+                min++;
             }
         }
 
-
-        return sum;
+        return min;
     }
 
+    // меньше среднего
+    public int minAmount(int @NotNull [] arr) {
+        int min = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < amount(arr)) {
+                min++;
+            }
+        }
+
+        return min;
+    }
+
+    // средняя сумма продаж в месяц
+    public int amount(int @NotNull [] arr) {
+        int total = sumSales(arr) / 12;
+        return total;
+    }
 
     // номер месяца, в котором был максимум продаж
     public int maxSales(int @NotNull [] arr) {

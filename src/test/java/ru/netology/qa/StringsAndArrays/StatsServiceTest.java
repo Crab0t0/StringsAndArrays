@@ -10,10 +10,39 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
         };
-        int expected = 5;
+        int expected = 181;
         int actyal = service.sumSales(arr);
         Assertions.assertEquals(expected, actyal);
 
+    }
+
+    @Test
+    public void maxAmount() {
+        StatsService service = new StatsService();
+        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+        int actual = service.maxAmount(arr);
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void minAmount() {
+        StatsService service = new StatsService();
+        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 5;
+        int actual = service.minAmount(arr);
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void amount() {
+        StatsService service = new StatsService();
+        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        int expected = 15;
+        int actual = service.amount(arr);
+        Assertions.assertEquals(expected, actual);
     }
 
 

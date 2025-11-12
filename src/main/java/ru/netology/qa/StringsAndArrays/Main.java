@@ -1,5 +1,6 @@
 package ru.netology.qa.StringsAndArrays;
 
+import java.security.Provider;
 import java.util.Arrays;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
         arr[2] = 13;
         arr[3] = 15;
         arr[4] = 17;
-        arr[5] = 20;
+        arr[5] = 21;
         arr[6] = 19;
         arr[7] = 20;
         arr[8] = 7;
@@ -18,7 +19,7 @@ public class Main {
         arr[10] = 14;
         arr[11] = 18;
         System.out.println(Arrays.toString(arr));
-        System.out.println();
+
 
     }
 }
