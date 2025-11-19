@@ -17,7 +17,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void maxAmount() {
+    public void maxAverageNumberSales() {
         StatsService service = new StatsService();
         int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
         int expected = 5;
@@ -27,7 +27,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void minAmount() {
+    public void minAverageNumberSales() {
         StatsService service = new StatsService();
         int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
         int expected = 5;
@@ -37,11 +37,11 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void amount() {
+    public void AverageNumberSales() {
         StatsService service = new StatsService();
         int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
         int expected = 15;
-        int actual = service.amount(arr);
+        int actual = service.AverageNumberSales(arr);
         Assertions.assertEquals(expected, actual);
     }
 

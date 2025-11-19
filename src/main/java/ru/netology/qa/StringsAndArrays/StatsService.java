@@ -18,19 +18,7 @@ public class StatsService {
     public int maxAmount(int @NotNull [] arr) {
         int min = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > amount(arr)) {
-                min++;
-            }
-        }
-
-        return min;
-    }
-
-    // меньше среднего
-    public int minAmount(int @NotNull [] arr) {
-        int min = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < amount(arr)) {
+            if (arr[i] > AverageNumberSales(arr)) {
                 min++;
             }
         }
@@ -39,10 +27,24 @@ public class StatsService {
     }
 
     // средняя сумма продаж в месяц
-    public int amount(int @NotNull [] arr) {
+    public int AverageNumberSales(int @NotNull [] arr) {
         int total = sumSales(arr) / 12;
         return total;
     }
+
+    // меньше среднего
+    public int minAmount(int @NotNull [] arr) {
+        int min = 0;
+        int total = sumSales(arr) / 12;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < total) {
+                min++;
+            }
+        }
+
+        return min;
+    }
+
 
     // номер месяца, в котором был максимум продаж
     public int maxSales(int @NotNull [] arr) {
