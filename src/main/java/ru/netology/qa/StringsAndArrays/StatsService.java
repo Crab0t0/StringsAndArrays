@@ -4,8 +4,8 @@ import org.jetbrains.annotations.NotNull;
 
 public class StatsService {
     // все продажи
-    public int sumSales(int @NotNull [] arr) {
-        int summa = 0;
+    public long sumSales(long @NotNull [] arr) {
+        long summa = 0;
         for (int i = 0; i < arr.length; i++) {
             summa += arr[i];
 
@@ -15,8 +15,8 @@ public class StatsService {
     }
 
     // больше среднего
-    public int maxAmount(int @NotNull [] arr) {
-        int min = 0;
+    public long maxAmount(long @NotNull [] arr) {
+        long min = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] > AverageNumberSales(arr)) {
                 min++;
@@ -27,15 +27,15 @@ public class StatsService {
     }
 
     // средняя сумма продаж в месяц
-    public int AverageNumberSales(int @NotNull [] arr) {
-        int total = sumSales(arr) / 12;
+    public long AverageNumberSales(long @NotNull [] arr) {
+        long total = sumSales(arr) / 12;
         return total;
     }
 
     // меньше среднего
-    public int minAmount(int @NotNull [] arr) {
-        int min = 0;
-        int total = sumSales(arr) / 12;
+    public long minAmount(long @NotNull [] arr) {
+        long min = 0;
+        long total = sumSales(arr) / 12;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] < total) {
                 min++;
@@ -47,7 +47,7 @@ public class StatsService {
 
 
     // номер месяца, в котором был максимум продаж
-    public int maxSales(int @NotNull [] arr) {
+    public long maxSales(long @NotNull [] arr) {
         int maxMonth = 0; // номер месяца с максимальными продажами.
 
         for (int i = 0; i < arr.length; i++) {
@@ -61,7 +61,7 @@ public class StatsService {
     }
 
     // номер месяца, в котором был минимум продаж
-    public int minSales(int @NotNull [] arr) {
+    public long minSales(long @NotNull [] arr) {
         int minMonth = 0; // номер месяца с мин продажами.
 
         for (int i = 0; i < arr.length; i++) {

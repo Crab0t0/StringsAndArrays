@@ -8,10 +8,10 @@ public class StatsServiceTest {
     @Test
     public void sumSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
+        long[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
         };
-        int expected = 181;
-        int actyal = service.sumSales(arr);
+        long expected = 181;
+        long actyal = service.sumSales(arr);
         Assertions.assertEquals(expected, actyal);
 
     }
@@ -19,9 +19,9 @@ public class StatsServiceTest {
     @Test
     public void maxAverageNumberSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        int expected = 5;
-        int actual = service.maxAmount(arr);
+        long[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        long actual = service.maxAmount(arr);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -29,9 +29,9 @@ public class StatsServiceTest {
     @Test
     public void minAverageNumberSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        int expected = 5;
-        int actual = service.minAmount(arr);
+        long[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        long expected = 5;
+        long actual = service.minAmount(arr);
         Assertions.assertEquals(expected, actual);
 
     }
@@ -39,9 +39,9 @@ public class StatsServiceTest {
     @Test
     public void AverageNumberSales() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
-        int expected = 15;
-        int actual = service.AverageNumberSales(arr);
+        long[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18};
+        long expected = 15;
+        long actual = service.AverageNumberSales(arr);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -49,24 +49,24 @@ public class StatsServiceTest {
     @Test
     public void maxMonth() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
+        long[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
 
         };
 
-        int expected = 6;
-        int acttual = service.maxSales(arr);
+        long expected = 6;
+        long acttual = service.maxSales(arr);
         Assertions.assertEquals(expected, acttual);
     }
 
     @Test
     public void minMonth() {
         StatsService service = new StatsService();
-        int[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
+        long[] arr = {8, 15, 13, 15, 17, 21, 19, 20, 7, 14, 14, 18
 
         };
 
-        int expected = 9;
-        int acttual = service.minSales(arr);
+        long expected = 9;
+        long acttual = service.minSales(arr);
         Assertions.assertEquals(expected, acttual);
 
 

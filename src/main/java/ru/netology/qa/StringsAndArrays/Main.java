@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[12];//масив
+        long[] arr = new long[12];//масив
         arr[0] = 8;
         arr[1] = 15;
         arr[2] = 13;
